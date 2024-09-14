@@ -16,7 +16,7 @@ stages{
 	stage('Checkout') {
         steps 
 		{                
-            git 'https://github.com/hkshitesh/DEVOPS-B25.git'
+            git 'https://github.com/prashant9839/maven.git'
         }
     }
 
@@ -24,14 +24,14 @@ stages{
 	{
 		steps
 		{
-			bat 'mvn clean'
+			sh 'mvn clean'
 		}			
 	}
 	stage('Test Stage')
 	{
 		steps
 		{
-			bat 'mvn test'
+			sh 'mvn test'
 		}			
 	}
 	stage('Pre-Build Stage')
@@ -45,7 +45,7 @@ stages{
 	{
 		steps
 		{
-			bat 'mvn install'
+			sh 'mvn install'
 		}			
 	}
 	stage('Post-Build Stage')
@@ -59,7 +59,7 @@ stages{
 	{
 		steps
 		{
-			bat 'java --version'
+			sh 'java --version'
 		}			
 	}
 	
@@ -70,6 +70,6 @@ stages{
 			echo 'Successfully Build Thanks'
 		}			
 	}
-
+    
 }
 }
