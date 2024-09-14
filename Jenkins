@@ -27,6 +27,19 @@ stages{
 			sh 'mvn clean'
 		}			
 	}
+	stage('sssssssssssssssssssssssssssssssssss Stage')
+	{
+		steps
+		{
+			echo"hwllow new"
+		}			
+	}
+	{
+		steps
+		{
+			sh 'mvn clean'
+		}			
+
 	stage('Test Stage')
 	{
 		steps
